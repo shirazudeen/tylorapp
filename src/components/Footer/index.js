@@ -1,45 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter,Link} from "react-router-dom";
-
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import aboutus from "../About/aboutus/index";
+import contactus from "../About/contactus/index";
+import help from "../Help/payments/index";
 
 const Footer = () => {
   return (
     <BrowserRouter>
+      <Switch>
+        <Route path="/Aboutus" component={aboutus} />F
+        <Route path="/Contactus" component={contactus} />
+        <Route path="/Help" component={help} />
+      </Switch>
       <FooterContainer>
         <FooterWrap>
           <FooterLinkContainer>
             <FooterLinkWrapper>
               <FooterLinkItem>
                 <FooterLinkTitle>About</FooterLinkTitle>
-                <FooterLink><Link to="/Aboutus">about us</Link></FooterLink>
-                <FooterLink>contact us</FooterLink>
-                <FooterLink>careers</FooterLink>
-                <FooterLink>wholesale</FooterLink>
+                <FooterLink to="/Aboutus">about us</FooterLink>
+                <FooterLink to="/Contactus">contact us</FooterLink>
+                <FooterLink to="/careers">careers</FooterLink>
+                <FooterLink to="/wholesale">wholesale</FooterLink>
               </FooterLinkItem>
               <FooterLinkItem>
-                <FooterLinkTitle>Help</FooterLinkTitle>
-                <FooterLink>payments</FooterLink>
-                <FooterLink>shipping</FooterLink>
-                <FooterLink>Cancellation &</FooterLink>
-                <FooterLink>Return</FooterLink>
-                <FooterLink>FAQ</FooterLink>
-                <FooterLink>report</FooterLink>
+                <FooterLinkTitle >Help</FooterLinkTitle>
+                <FooterLink to="/payments">payments</FooterLink>
+                <FooterLink to="/shipping"> shipping</FooterLink>
+                <FooterLink to="/Cancellation">Cancellation &</FooterLink>
+                <FooterLink to="/Return">Return</FooterLink>
+                <FooterLink to="/FAQ">FAQ</FooterLink>
+                <FooterLink to="/report">report</FooterLink>
               </FooterLinkItem>
               <FooterLinkItem>
                 <FooterLinkTitle>Policy</FooterLinkTitle>
-                <FooterLink>Return Policy</FooterLink>
-                <FooterLink>Terms Of Use</FooterLink>
-                <FooterLink>Security</FooterLink>
-                <FooterLink>Privacy</FooterLink>
-                <FooterLink>Sitemap</FooterLink>
-                <FooterLink>EPR Compliance</FooterLink>
+                <FooterLink to="/Return">Return Policy</FooterLink>
+                <FooterLink to="/TermsOfUse">Terms Of Use</FooterLink>
+                <FooterLink to="/Security">Security</FooterLink>
+                <FooterLink to="/Privacy">Privacy</FooterLink>
+                <FooterLink to="/Sitemap">Sitemap</FooterLink>
+                <FooterLink to="/EPRCompliance">EPR Compliance</FooterLink>
               </FooterLinkItem>
               <FooterLinkItem>
                 <FooterLinkTitle>Social Media</FooterLinkTitle>
-                <FooterLink>Twitter</FooterLink>
-                <FooterLink>Facebook</FooterLink>
-                <FooterLink>Youtube</FooterLink>
+                <FooterLink to="/Twitter">Twitter</FooterLink>
+                <FooterLink to="/Facebook">Facebook</FooterLink>
+                <FooterLink to="/Youtube">Youtube</FooterLink>
               </FooterLinkItem>
               <FooterLinkItem>
                 <FooterLinkTitle>Mail Us</FooterLinkTitle>
@@ -63,7 +70,6 @@ const Footer = () => {
           </FooterLinkContainer>
         </FooterWrap>
       </FooterContainer>
-      
     </BrowserRouter>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react'
 const aboutus = () => {
     return (
         <div>
-            <h1>About this example....</h1>
+            <h1>Tylor Internet private Service</h1>
         </div>
     )
 }
