@@ -1,9 +1,10 @@
 import React from 'react'
+import NotFound from '../../../pages/404-not-found'
 
 const aboutus = () => {
     return (
         <div>
-            <h1>Tylor Internet private Service</h1>
+            <NotFound/>
         </div>
     )
 }
